@@ -1,0 +1,1 @@
+java -jar tomorrowPlan-1.0.jar
