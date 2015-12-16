@@ -1,0 +1,419 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.tsystems.si.aviation.imf</groupId>
+  <artifactId>tomorrowPlan</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>tomorrowPlan</name>
+  <url>http://maven.apache.org</url>
+	<repositories>
+		
+				<repository>
+			<id>CN</id>
+			<name>OSChina Central</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>maven</id>
+			<name>Maven Repository Switchboard</name>
+			<layout>default</layout>
+			<url>http://repo1.maven.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>alibaba-opensource</id>
+			<name>alibaba-opensource</name>
+			<url>http://code.alibabatech.com/mvn/releases/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>alibaba-opensource-snapshot</id>
+			<name>alibaba-opensource-snapshot</name>
+			<url>http://code.alibabatech.com/mvn/snapshots/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository>
+	</repositories>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  <dependency>
+        <groupId>CL3Export</groupId>
+        <artifactId>CL3Export</artifactId>
+        <version>1.0.0</version>
+		<scope>system</scope>
+        <systemPath>${project.basedir}/lib/CL3Export.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>CL3Nonexport</groupId>
+        <artifactId>CL3Nonexport</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/CL3Nonexport.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.commonservices</groupId>
+        <artifactId>com.ibm.mq.commonservices</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.commonservices.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.headers</groupId>
+        <artifactId>com.ibm.mq.headers</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.headers.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq</groupId>
+        <artifactId>com.ibm.mq</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.jmqi</groupId>
+        <artifactId>com.ibm.mq.jmqi</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.jmqi.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.jms.Nojndi</groupId>
+        <artifactId>com.ibm.mq.jms.Nojndi</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.jms.Nojndi.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.pcf</groupId>
+        <artifactId>com.ibm.mq.pcf</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.pcf.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.soap</groupId>
+        <artifactId>com.ibm.mq.soap</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.soap.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mq.tools.ras</groupId>
+        <artifactId>com.ibm.mq.tools.ras</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mq.tools.ras.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>com.ibm.mqjms</groupId>
+        <artifactId>com.ibm.mqjms</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/com.ibm.mqjms.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>commons-configuration</groupId>
+        <artifactId>commons-configuration</artifactId>
+         <version>1.9</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/commons-configuration-1.9.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>connector</groupId>
+        <artifactId>connector</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/connector.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>dhbcore</groupId>
+        <artifactId>dhbcore</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/dhbcore.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>fscontext</groupId>
+        <artifactId>fscontext</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/fscontext.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>jms</groupId>
+        <artifactId>jms</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/jms.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>jndi</groupId>
+        <artifactId>jndi</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/jndi.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>jta</groupId>
+        <artifactId>jta</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/jta.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>ldap</groupId>
+        <artifactId>ldap</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/ldap.jar</systemPath>
+    </dependency>
+    <dependency>
+        <groupId>providerutil</groupId>
+        <artifactId>providerutil</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/providerutil.jar</systemPath>
+    </dependency>
+        <dependency>
+        <groupId>rmm</groupId>
+        <artifactId>rmm</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/rmm.jar</systemPath>
+    </dependency>
+        <dependency>
+        <groupId>Imf_2.0.5</groupId>
+        <artifactId>Imf_2.0.5</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/Imf_2.0.5.jar</systemPath>
+    </dependency>
+  <dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi</artifactId>
+	<version>3.13</version>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi-ooxml</artifactId>
+	<version>3.13</version>
+</dependency>
+<dependency>
+	<groupId>ch.qos.logback</groupId>
+	<artifactId>logback-classic</artifactId>
+	<version>1.1.3</version>
+</dependency>
+  <dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+	<version>18.0</version>
+</dependency>
+<dependency>
+	<groupId>commons-configuration</groupId>
+	<artifactId>commons-configuration</artifactId>
+	<version>1.9</version>
+</dependency>
+<dependency>
+	<groupId>commons-lang</groupId>
+	<artifactId>commons-lang</artifactId>
+	<version>2.6</version>
+</dependency>
+  <dependency>
+	<groupId>commons-io</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>2.4</version>
+</dependency>
+  <dependency>
+	<groupId>dom4j</groupId>
+	<artifactId>dom4j</artifactId>
+	<version>1.6.1</version>
+</dependency>
+<dependency>
+	<groupId>jaxen</groupId>
+	<artifactId>jaxen</artifactId>
+	<version>1.1.6</version>
+</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+    <build>
+   <defaultGoal>package</defaultGoal>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding> 
+                  <compilerArguments>
+                   <extdirs>tomorrowPlan/lib</extdirs>
+                 </compilerArguments>
+                </configuration>
+            </plugin>
+
+                        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <includes>
+                        <!--不写匹配默认规则,TestSuit结尾，test开头的方法  -->
+                        <include>**/*TestSuit.java</include>   <!-- 两个星号**用来匹配任意路径，一个星号*用来获取除路径风格符外的0个或多个字符 -->
+                    </includes>
+                    <excludes>
+                        <exclude>**/*Test*.java</exclude>
+                    </excludes>
+                    <skip>ture</skip>  <!-- 略过单元测试 -->
+                    <testFailureIgnore>true</testFailureIgnore> <!-- 当Maven 遇到一个测试失败，它默认的行为是停止当前的构建。 如果你希望继续构建项目，即使 Surefire 插件遇到了失败的单元测试，你就需要设置 Surefire 的testFailureIgnore 这个配置属性为 true -->
+                </configuration>
+            </plugin>
+            <!-- 把依赖的jar包拷到lib目录下 -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.9</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/tomorrowPlan_lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+              <!-- 打包source文件为jar文件 -->  
+            <plugin>  
+                <artifactId>maven-source-plugin</artifactId>  
+                <version>2.1</version>  
+                <configuration>  
+                    <attach>true</attach>  
+                    <encoding>UTF-8</encoding>  
+                </configuration>  
+                <executions>  
+                    <execution>  
+                        <phase>compile</phase>  
+                        <goals>  
+                            <goal>jar</goal>  
+                        </goals>  
+                    </execution>  
+                </executions>  
+            </plugin>  
+            
+            		      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <archive>
+                    <addMavenDescriptor>false</addMavenDescriptor>
+                    <manifestFile>src/main/resources/MANIFEST.MF</manifestFile>
+                        <manifest>
+                            <addClasspath>true</addClasspath>  <!-- 在jar包中增加依赖jar路径说明 -->
+                            <classpathPrefix>tomorrowPlan_lib/</classpathPrefix>
+                            <mainClass>com.tsystems.si.aviation.imf.tomorrowPlan.core.ApplicationPlan</mainClass>
+                        </manifest>
+                        
+                        <!-- 用maven在MANIFEST.MF资料中的Class-Path中增加当前目录(.)  -->
+                        <manifestEntries>
+                        <Build-Time>${maven.build.timestamp}</Build-Time>
+                        <Built-By>bfang(Bolo.Fang@t-systems.com;QQ:342067200)</Built-By>
+                           <Class-Path>.</Class-Path>
+                        </manifestEntries>
+                        
+                    </archive>
+                </configuration>
+            </plugin>
+
+        </plugins>
+        
+        
+        <!-- POM文件报错maven-dependency-plugin (goals "copy-dependencies", "unpack") is not supported by m2e.， 
+        在</build>标签前添加如下内容  -->
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.apache.maven.plugins</groupId>
+                                        <artifactId>maven-dependency-plugin</artifactId>
+                                        <versionRange>[2.0,)</versionRange>
+                                        <goals>
+                                            <goal>copy-dependencies</goal>
+                                            <goal>unpack</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+          <!--打包进XML等文件，排除java及版本控制文件  -->
+    <resources>
+
+            <resource>
+                <directory>src/test/resources/</directory>
+                <excludes>
+                    <exclude>**/*.*</exclude>
+                </excludes>                
+            </resource>
+
+               <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                     <include>**/*.xsl</include>
+                </includes>               
+            </resource>
+
+        </resources>
+        
+    </build>
+</project>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Class-Path: . tomorrowPlan_lib/CL3Export.jar tomorrowPlan_lib/CL3Nonex
+ port.jar tomorrowPlan_lib/com.ibm.mq.commonservices.jar tomorrowPlan_
+ lib/com.ibm.mq.headers.jar tomorrowPlan_lib/com.ibm.mq.jar tomorrowPl
+ an_lib/com.ibm.mq.jmqi.jar tomorrowPlan_lib/com.ibm.mq.jms.Nojndi.jar
+  tomorrowPlan_lib/com.ibm.mq.pcf.jar tomorrowPlan_lib/com.ibm.mq.soap
+ .jar tomorrowPlan_lib/com.ibm.mq.tools.ras.jar tomorrowPlan_lib/com.i
+ bm.mqjms.jar tomorrowPlan_lib/commons-configuration-1.9.jar tomorrowP
+ lan_lib/commons-logging-1.1.1.jar tomorrowPlan_lib/connector.jar tomo
+ rrowPlan_lib/dhbcore.jar tomorrowPlan_lib/fscontext.jar tomorrowPlan_
+ lib/jms.jar tomorrowPlan_lib/jndi.jar tomorrowPlan_lib/jta.jar tomorr
+ owPlan_lib/ldap.jar tomorrowPlan_lib/providerutil.jar tomorrowPlan_li
+ b/rmm.jar tomorrowPlan_lib/Imf_2.0.5.jar tomorrowPlan_lib/poi-3.13.ja
+ r tomorrowPlan_lib/commons-codec-1.9.jar tomorrowPlan_lib/poi-ooxml-3
+ .13.jar tomorrowPlan_lib/poi-ooxml-schemas-3.13.jar tomorrowPlan_lib/
+ xmlbeans-2.6.0.jar tomorrowPlan_lib/stax-api-1.0.1.jar tomorrowPlan_l
+ ib/logback-classic-1.1.3.jar tomorrowPlan_lib/logback-core-1.1.3.jar 
+ tomorrowPlan_lib/slf4j-api-1.7.7.jar tomorrowPlan_lib/guava-18.0.jar 
+ tomorrowPlan_lib/commons-lang-2.6.jar tomorrowPlan_lib/commons-io-2.4
+ .jar tomorrowPlan_lib/dom4j-1.6.1.jar tomorrowPlan_lib/xml-apis-1.0.b
+ 2.jar tomorrowPlan_lib/jaxen-1.1.6.jar
+Main-Class: com.tsystems.si.aviation.imf.tomorrowPlan.core.Application
+ Plan
+

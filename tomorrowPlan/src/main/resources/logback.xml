@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true">
+     <timestamp key="bySecond" datePattern="yyyy-MM-dd HHmmss" />
+	<appender name="pln_ROLLING" class="ch.qos.logback.core.FileAppender">
+		<!-- <file>./logs/pln-${bySecond}.log</file> -->
+		<file>./logs/pln.log</file>
+		<!-- 是累积更新，还是重新全部覆盖，默认true,累积更新 -->
+		<append>false</append>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders 作用是将logger事件转换成字节数组，并将字节数组写入到输出流 -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<logger name="com.tsystems.si.aviation.imf.tomorrowPlan" level="INFO">
+		<appender-ref ref="pln_ROLLING" />
+	</logger>
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
