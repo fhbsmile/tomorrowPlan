@@ -32,8 +32,8 @@ public class TestBeanPaser {
 	
 	@Before
 	public void setUp(){
-		excelPath="./file/首航航班计划通知单2015-12-3xls.xls";
-		//excelPath="./file/南航预报通知单2015-12-03.xls";
+		//excelPath="./file/首航航班计划通知单2015-12-3xls.xls";
+		excelPath="./file/南航预报通知单2015-12-03.xls";
 		
 		List<List<String>> rowsList = new ArrayList<List<String>>();
 		try {
