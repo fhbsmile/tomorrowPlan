@@ -32,6 +32,7 @@ public class TestBeanPaser {
 	
 	@Before
 	public void setUp(){
+		//add comment test
 		excelPath="./file/首航航班计划通知单2015-12-3xls.xls";
 		//excelPath="./file/南航预报通知单2015-12-03.xls";
 		
