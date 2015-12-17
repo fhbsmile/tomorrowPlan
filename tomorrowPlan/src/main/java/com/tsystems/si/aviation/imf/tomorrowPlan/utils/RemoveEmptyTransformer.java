@@ -33,8 +33,8 @@ public class RemoveEmptyTransformer {
 	try {
 		
            xsl = IOUtils.toString(urlFilterXSL, "utf-8");
-		logger.info("Loading  Filter XSL Success!");
-		logger.info("\n{}",xsl);
+		logger.debug("Loading  Filter XSL Success!");
+		logger.debug("\n{}",xsl);
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

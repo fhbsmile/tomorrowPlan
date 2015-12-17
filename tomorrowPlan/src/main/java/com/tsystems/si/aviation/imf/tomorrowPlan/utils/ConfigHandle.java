@@ -59,8 +59,8 @@ public class ConfigHandle {
 		try {
 			
 			xmlTemplateString = IOUtils.toString(urlTemplateXML, "utf-8");
-			logger.info("Loading XML Template [{}] Success!",xmlTemplate);
-			logger.info("\n{}",xmlTemplateString);
+			logger.debug("Loading XML Template [{}] Success!",xmlTemplate);
+			logger.debug("\n{}",xmlTemplateString);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
