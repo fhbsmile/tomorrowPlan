@@ -232,8 +232,8 @@ public class FileHandle {
 					if(validateDateTime(takeoffdatetime)){
 						String s1= TimeHandle.formatTomorrowPlanDateTime(takeoffdatetime);
 						//for test
-						s1= s1.replace("12-03", "12-17");
-						s1= s1.replace("12-04", "12-18");
+						//s1= s1.replace("12-03", "12-17");
+						//s1= s1.replace("12-04", "12-18");
 						eb.setTakeOffDateTime(s1);
 					}else{
 						validateResult = false;
@@ -242,8 +242,8 @@ public class FileHandle {
 					
 					if(validateDateTime(landingdatetime)){
 						String s2= TimeHandle.formatTomorrowPlanDateTime(landingdatetime);
-						s2= s2.replace("12-03", "12-17");
-						s2= s2.replace("12-04", "12-18");
+						//s2= s2.replace("12-03", "12-17");
+						//s2= s2.replace("12-04", "12-18");
 						eb.setLandingDateTime(s2);
 					}else{
 						validateResult = false;
