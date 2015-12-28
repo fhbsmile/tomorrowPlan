@@ -76,7 +76,7 @@ public class ApplicationPlan
 
     }
 
-    logger.info(">>>>>>>>>>退出系统<<<<<<<<<<");
-    System.exit(0);
+    logger.info("\n"+">>>>>>>>>>请退出系统<<<<<<<<<<");
+
   }
 }
