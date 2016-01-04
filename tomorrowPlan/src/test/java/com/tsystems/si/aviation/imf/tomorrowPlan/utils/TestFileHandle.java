@@ -59,4 +59,12 @@ public class TestFileHandle {
 		}
 		
 	}
+	
+	@Test
+	public void testValidateDateTime(){
+		String date = "1/4/16 12:55";
+		boolean res = FileHandle.validateDateTime(date);
+		logger.info("Result:{}",res);
+		
+	}
 }

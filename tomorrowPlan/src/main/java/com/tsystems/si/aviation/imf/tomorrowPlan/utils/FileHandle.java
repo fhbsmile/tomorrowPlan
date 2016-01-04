@@ -331,7 +331,7 @@ public class FileHandle {
 	}
 	 //2015-12-03 20:45:00
 	 public static boolean validateDateTime(String dateTime){
-		 String dateTimePattern = "[0-9]{2,4}[/|-][0-9]{1,2}[/|-][0-9]{1,2}[\\s]+[0-9]{1,2}:[0-9]{1,2}[:]{0,1}[0-9]{0,2}";
+		 String dateTimePattern = "[0-9]{1,4}[/|-][0-9]{1,2}[/|-][0-9]{1,2}[\\s]+[0-9]{1,2}:[0-9]{1,2}[:]{0,1}[0-9]{0,2}";
 		 return dateTime.matches(dateTimePattern);
 	}
 }
