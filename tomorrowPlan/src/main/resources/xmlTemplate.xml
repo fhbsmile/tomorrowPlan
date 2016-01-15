@@ -37,6 +37,7 @@
 							<AirportIATACode LegNo="1">@AirportIATACode1@</AirportIATACode>
 							<AirportIATACode LegNo="2">@AirportIATACode2@</AirportIATACode>
 							<AirportIATACode LegNo="3">@AirportIATACode3@</AirportIATACode>
+							<AirportIATACode LegNo="99">@AirportIATACode4@</AirportIATACode>
 						</IATAFullRoute>
 						<IATANextAirport>@IATANextAirport@</IATANextAirport>
 						<IATADestinationAirport>@IATADestinationAirport@</IATADestinationAirport>

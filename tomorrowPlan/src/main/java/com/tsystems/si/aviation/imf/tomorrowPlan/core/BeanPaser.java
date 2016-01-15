@@ -69,6 +69,28 @@ public String createXmlMessage(ExcelBean eb,String templateXML){
 	String FlightServiceType = "W/Z";
 	if(eb.getServiceTypeCode().equals("0")){
 		 FlightServiceType = "W/Z";
+	}else if(eb.getServiceTypeCode().equals("1")){
+		 FlightServiceType = "C/B";
+	}else if(eb.getServiceTypeCode().equals("12")){
+		FlightServiceType = "H/G";
+	}else if(eb.getServiceTypeCode().equals("13")){
+		FlightServiceType = "F/J";
+	}else if(eb.getServiceTypeCode().equals("2")){
+		FlightServiceType = "Z/P";
+	}else if(eb.getServiceTypeCode().equals("3")){
+		FlightServiceType = "S/F";
+	}else if(eb.getServiceTypeCode().equals("6")){
+		FlightServiceType = "N/M";
+	}else if(eb.getServiceTypeCode().equals("7")){
+		FlightServiceType = "B/W";
+	}else if(eb.getServiceTypeCode().equals("8")){
+		FlightServiceType = "Q/B";
+	}else if(eb.getServiceTypeCode().equals("E")){
+		FlightServiceType = "U/H";
+	}else if(eb.getServiceTypeCode().equals("F")){
+		FlightServiceType = "O/F";
+	}else if(eb.getServiceTypeCode().equals("G")){
+		FlightServiceType = "F/H";
 	}
 	attrabuteForXMLMap.put("MessageSequenceID", sequenceGenerator.generateNextNumber());
 	attrabuteForXMLMap.put("OperationMode","NEW");
@@ -104,40 +126,41 @@ public String createXmlMessage(ExcelBean eb,String templateXML){
 	String AirportIATACode1 =null;
 	String AirportIATACode2 =null;
 	String AirportIATACode3 =null;
+	String AirportIATACode4 =null;
 	String IATANextAirport =null;
 	String IATADestinationAirport =null;
 	String ScheduledPreviousAirportDepartureDateTime = null;
     if(FlightDirection.equals("D")){
-    	IATADestinationAirport = lastStop;
+    	//IATADestinationAirport = lastStop;
     	if(eb.getVar1()==null && eb.getVar2()==null){
-    		IATANextAirport = lastStop;
-    		AirportIATACode1=lastStop;
+    		//IATANextAirport = lastStop;
+    		AirportIATACode4=lastStop;
     	}
     	if(eb.getVar1()!=null && eb.getVar2()==null){
-    		IATANextAirport = eb.getVar1();
+    		//IATANextAirport = eb.getVar1();
     		AirportIATACode1=eb.getVar1();
-    		AirportIATACode2=lastStop;
+    		AirportIATACode4=lastStop;
     	}
     	if(eb.getVar1()!=null && eb.getVar2()!=null){
-    		IATANextAirport = eb.getVar1();
+    		//IATANextAirport = eb.getVar1();
     		AirportIATACode1=eb.getVar1();
     		AirportIATACode2=eb.getVar2();
-    		AirportIATACode3=lastStop;
+    		AirportIATACode4=lastStop;
     	}
     }else{
     	IATAOriginAirport = firstStop;
     	ScheduledPreviousAirportDepartureDateTime = firstStopDateTime.replace(" ", "T");
     	if(eb.getVar1()==null && eb.getVar2()==null){
-    		IATAPreviousAirport = firstStop;
+    		//IATAPreviousAirport = firstStop;
     		AirportIATACode1=firstStop;
     	}
     	if(eb.getVar1()!=null && eb.getVar2()==null){
-    		IATAPreviousAirport = eb.getVar1();
+    		//IATAPreviousAirport = eb.getVar1();
     		AirportIATACode1=firstStop;
     		AirportIATACode2=eb.getVar1();
     	}
     	if(eb.getVar1()!=null && eb.getVar2()!=null){
-    		IATAPreviousAirport = eb.getVar2();
+    		//IATAPreviousAirport = eb.getVar2();
     		AirportIATACode1=firstStop;
     		AirportIATACode2=eb.getVar1();
     		AirportIATACode3=eb.getVar2();
@@ -148,6 +171,7 @@ public String createXmlMessage(ExcelBean eb,String templateXML){
 	attrabuteForXMLMap.put("AirportIATACode1", AirportIATACode1);
 	attrabuteForXMLMap.put("AirportIATACode2", AirportIATACode2);
 	attrabuteForXMLMap.put("AirportIATACode3", AirportIATACode3);
+	attrabuteForXMLMap.put("AirportIATACode4", AirportIATACode4);
 	attrabuteForXMLMap.put("IATANextAirport", IATANextAirport);
 	attrabuteForXMLMap.put("IATADestinationAirport", IATADestinationAirport);
     
