@@ -149,10 +149,11 @@ public String createXmlMessage(ExcelBean eb,String templateXML){
     	}
     }else{
     	IATAOriginAirport = firstStop;
-    	ScheduledPreviousAirportDepartureDateTime = firstStopDateTime.replace(" ", "T");
+    	
     	if(eb.getVar1()==null && eb.getVar2()==null){
     		//IATAPreviousAirport = firstStop;
     		AirportIATACode1=firstStop;
+    		ScheduledPreviousAirportDepartureDateTime = firstStopDateTime.replace(" ", "T");
     	}
     	if(eb.getVar1()!=null && eb.getVar2()==null){
     		//IATAPreviousAirport = eb.getVar1();
